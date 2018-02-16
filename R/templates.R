@@ -138,6 +138,18 @@ stroke-opacity: .5;
 <script src={{d3Script}}></script>\n"
 }
 
+#the function for moving the nodes
+  function dragmove() {
+    d3.select(this).attr("transform", 
+        "translate(" + (
+        	   d.x = Math.max(0, Math.min(width - d.dx, d3.event.x))
+        	) + "," + (
+                   d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))
+            ) + ")");
+    sankey.relayout();
+    link.attr("d", path);
+  }
+}
 
 #' Mustache basic Force Directed Network template for d3SimpleNetwork
 #'
