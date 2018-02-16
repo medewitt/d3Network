@@ -72,6 +72,10 @@ d3Sankey <- function(Links, Nodes, Source, Target, Value = NULL, NodeID,
 	parentElement = "body",  standAlone = TRUE, file = NULL, iframe = FALSE, 
 	d3Script = "http://d3js.org/d3.v3.min.js")
 {
+	if(d3Script = TRUE){
+		d3Script <- "http://d3js.org/d3.v3.min.js"
+		}else{
+		d3Script <- d3Script}
 	if (!isTRUE(standAlone) & isTRUE(iframe)){
     	stop("If iframe = TRUE then standAlone must be TRUE.")
   	}
