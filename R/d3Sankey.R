@@ -70,9 +70,9 @@
 d3Sankey <- function(Links, Nodes, Source, Target, Value = NULL, NodeID, 
 	height = 600, width = 900, fontsize = 7, nodeWidth = 15, nodePadding = 10, 
 	parentElement = "body",  standAlone = TRUE, file = NULL, iframe = FALSE, 
-	d3Script = "http://d3js.org/d3.v3.min.js")
+	d3Script = "default")
 {
-	if(d3Script = TRUE){
+	if(d3Script == "default"){
 		d3Script <- "http://d3js.org/d3.v3.min.js"
 		}else{
 		d3Script <- d3Script}
